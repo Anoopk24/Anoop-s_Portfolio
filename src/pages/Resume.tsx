@@ -71,7 +71,7 @@ export default function Resume() {
       <main className="max-w-3xl mx-auto bg-white p-12 shadow-2xl border border-slate-100 print:shadow-none print:border-none print:p-0 rounded-3xl print:rounded-none">
         <header className="border-b-2 border-slate-900 pb-6 mb-8">
           <h1 className="text-5xl font-display font-bold tracking-tight mb-2">ANOOP KAUR</h1>
-          <p className="text-lg font-sans text-secondary">Calgary, AB | 403-690-1494 | anoopkaur444@gmail.com</p>
+          <p className="text-lg font-sans text-secondary">Calgary, AB | anoopkaur444@gmail.com</p>
           <p className="text-sm font-sans text-slate-400 mt-1">linkedin.com/in/anoop-kaur-48bb89278 | github.com/Anoopk24</p>
         </header>
 
