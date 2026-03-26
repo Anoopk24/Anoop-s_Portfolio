@@ -1,24 +1,20 @@
-# Anoop Kaur - IT Specialist & Data Analyst Portfolio
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+</div>
 
-This is the professional portfolio of Anoop Kaur, an IT Support Technician and Data Analyst with 2+ years of experience in enterprise and MSP environments.
+# Run and deploy your AI Studio app
 
-## 🚀 Features
-- **Modern UI:** Built with React, Tailwind CSS, and Motion.
-- **Responsive Design:** Fully optimized for mobile, tablet, and desktop.
-- **Contact Form:** Integrated with a Node.js backend for email notifications.
-- **Experience Timeline:** Detailed history of professional roles and achievements.
-- **Skill Matrix:** Categorized technical expertise.
+This contains everything you need to run your app locally.
 
-## 🛠️ Tech Stack
-- **Frontend:** React.js, Tailwind CSS, Lucide Icons, Motion.
-- **Backend:** Node.js, Express, Nodemailer.
-- **Deployment:** Cloud Run / GitHub Pages.
+View your app in AI Studio: https://ai.studio/apps/7a360525-67b1-436d-a874-bc5f03adbc91
 
-## 📈 Professional Highlights
-- **Southern Alberta Institute of Technology (SAIT):** Diploma in Software Development.
-- **Certifications:** Google IT Support, Microsoft SQL Server, Microsoft Power BI.
+## Run Locally
 
-## 📧 Contact
-- **Email:** anoopkaur444@gmail.com
-- **LinkedIn:** [linkedin.com/in/anoop-kaur-48bb89278](https://www.linkedin.com/in/anoop-kaur-48bb89278/)
-- **GitHub:** [github.com/Anoopk24](https://github.com/Anoopk24)
+**Prerequisites:**  Node.js
+
+
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
