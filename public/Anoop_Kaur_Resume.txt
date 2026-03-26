@@ -1,0 +1,53 @@
+ANOOP KAUR
+Calgary, AB | 403-690-1494 | anoopkaur444@gmail.com | linkedin.com/in/anoop-kaur-48bb89278
+________________________________________
+PROFESSIONAL SUMMARY
+Detail-oriented IT Support / Deskside Support Technician with 2+ years of experience delivering onsite and remote technical support in hospitality and MSP environments. Strong expertise in Microsoft 365, hardware and software troubleshooting, ticketing systems, and end-user support. Skilled in T-SQL, SQL Server database management, system configuration, and IT service management (ITSM). Recognized for strong problem-solving abilities, customer service excellence, and maintaining high SLA performance in fast-paced environments.
+________________________________________
+TECHNICAL SKILLS
+Productivity Tools: Microsoft 365, Microsoft Office Suite, Microsoft Excel
+IT Support: Deskside Support, Helpdesk Support, Incident Management, Ticketing Systems, Remote Support Tools, Active Directory (basic), User Account Management
+Hardware: Desktop & Laptop Troubleshooting, Printer & Peripheral Support, Hardware Installation & Configuration
+Networking: Basic Networking, TCP/IP, DNS, DHCP, Connectivity Troubleshooting
+Database & Data: Microsoft SQL Server, T-SQL, Database Design, Query Optimization, Indexing, Execution Plans, Backup & Recovery, Data Normalization
+Programming: HTML, CSS, JavaScript, Python, SQL, Node.js, React.js
+Other: Asset Management, System Deployment, Software Installation, Performance Tuning, Documentation
+________________________________________
+EDUCATION
+Diploma in Software Development
+Southern Alberta Institute of Technology (SAIT), Calgary
+Completed: Aug 2024 | GPA: 3.5
+________________________________________
+CERTIFICATIONS
+Microsoft SQL Server Professional Certificate – Coursera
+• Writing and optimizing T-SQL queries
+• Designing normalized relational database schemas
+• Implementing data manipulation with transaction management
+• Performance tuning (indexing, execution plan analysis)
+• Database security, backup and recovery strategies
+• Integration with business intelligence tools
+• Applied hands-on projects using real-world database scenarios
+Google IT Support Professional Certificate (Coursera)
+• Technical Support Fundamentals
+• IT Security: Defense Against the Digital Dark Arts
+Preparing Data for Analysis with Microsoft Excel – Coursera
+________________________________________
+PROFESSIONAL EXPERIENCE
+IT Field Support Technician
+Four Points by Sheraton — Calgary, AB | Apr 2025 – Present
+• Provide onsite deskside support, resolving hardware, software, and network connectivity issues.
+• Install, configure, and troubleshoot desktops, laptops, printers, and peripherals.
+• Support Microsoft 365 applications; validate resolutions through testing and user confirmation.
+• Maintain IT asset inventory and assist with lifecycle management.
+• Document incidents and service requests to ensure SLA compliance and accurate reporting.
+IT Support Technician
+NPB Technologies — Calgary, AB | Sep 2024 – Mar 2025
+• Delivered onsite and remote technical support via phone, email, and remote access tools.
+• Installed and configured operating systems and enterprise applications.
+• Diagnosed software and connectivity issues; logged and tracked tickets using service management systems.
+• Assisted users with account setup, password resets, and troubleshooting system access issues.
+Helpdesk Support Analyst
+Net Vision IT Solutions — India | Jul 2022 – Apr 2023
+• Provided Level 1 technical support for desktops and business applications.
+• Performed software installation, troubleshooting, and user training.
+• Created technical documentation and knowledge base articles to improve service efficiency.
