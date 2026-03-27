@@ -1,14 +1,34 @@
+import { Briefcase, Code2, Cpu, Globe, Database, Terminal, Layers, Box, Cloud, FileText, Table, Monitor, Headphones, AlertCircle, Network, Code, Atom, ShieldCheck } from 'lucide-react';
+
 export default function Experience() {
   return (
-    <div id="experience" className="bg-white text-slate-900 min-h-screen py-12 scroll-mt-24">
-      <main className="container-width section-padding">
-        <h1 className="heading-lg mb-16">Work Experience</h1>
+    <div id="experience" className="bg-mesh-orange text-slate-900 min-h-screen py-12 scroll-mt-24 relative overflow-hidden">
+      {/* Merge Gradient from previous section */}
+      <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-[#f8fafc] to-transparent z-20 pointer-events-none"></div>
+      
+      {/* Pattern Merge from previous section (Home: bg-dot-pattern) */}
+      <div className="absolute top-0 left-0 w-full h-64 bg-dot-pattern opacity-15 [mask-image:linear-gradient(to_bottom,black,transparent)] pointer-events-none z-10"></div>
+      
+      {/* Background Elements */}
+      <div className="absolute top-0 left-0 w-full h-full bg-diagonal-pattern opacity-30 pointer-events-none"></div>
+      
+      <main className="container-width section-padding relative z-10">
+        <h1 className="heading-lg mb-16 flex items-center gap-4">
+          <span className="w-12 h-1 bg-primary rounded-full"></span>
+          Work Experience
+        </h1>
         
         {/* Projects Section */}
         <section className="mb-32">
-          <h2 className="text-2xl font-display font-bold text-primary mb-8 uppercase tracking-widest">Featured Projects</h2>
-          <div className="card-hover !p-12 bg-gradient-to-br from-white to-blue-50/30 border-blue-100">
-            <div className="max-w-2xl">
+          <h2 className="text-2xl font-display font-bold text-primary mb-8 uppercase tracking-widest flex items-center gap-3">
+            <Box className="text-primary" />
+            Featured Projects
+          </h2>
+          <div className="card-hover !p-12 bg-gradient-to-br from-white to-blue-50/30 border-blue-100 relative group overflow-hidden">
+            <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
+              <Code2 size={120} />
+            </div>
+            <div className="max-w-2xl relative z-10">
               <h3 className="text-3xl font-display font-bold mb-6 text-slate-900">Building the Future, One Line at a Time.</h3>
               <p className="text-lg text-secondary leading-relaxed mb-8">
                 I am currently in the laboratory, crafting some high-impact full-stack applications that bridge the gap between complex IT infrastructure and elegant user experiences. 
@@ -70,67 +90,71 @@ export default function Experience() {
         <section>
           <h2 className="heading-lg mb-12">Skill Matrix</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="card-hover">
+            <div className="card-hover group">
+              <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform">
+                <Layers size={24} />
+              </div>
               <h3 className="text-xl font-display font-bold mb-4 text-primary">Productivity Tools</h3>
-              <ul className="text-slate-600 space-y-2">
-                <li>Microsoft 365</li>
-                <li>Microsoft Office Suite</li>
-                <li>Microsoft Excel</li>
+              <ul className="text-slate-600 space-y-3">
+                <li className="flex items-center gap-2"><Cloud size={16} className="text-primary/60" /> Microsoft 365</li>
+                <li className="flex items-center gap-2"><FileText size={16} className="text-primary/60" /> Microsoft Office Suite</li>
+                <li className="flex items-center gap-2"><Table size={16} className="text-primary/60" /> Microsoft Excel</li>
               </ul>
             </div>
-            <div className="card-hover">
+            <div className="card-hover group">
+              <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform">
+                <Briefcase size={24} />
+              </div>
               <h3 className="text-xl font-display font-bold mb-4 text-primary">IT Support</h3>
-              <ul className="text-slate-600 space-y-2">
-                <li>Deskside Support</li>
-                <li>Helpdesk Support</li>
-                <li>Incident Management</li>
-                <li>Ticketing Systems</li>
-                <li>Remote Support Tools</li>
-                <li>Active Directory (basic)</li>
-                <li>User Account Management</li>
+              <ul className="text-slate-600 space-y-3">
+                <li className="flex items-center gap-2"><Monitor size={16} className="text-primary/60" /> Deskside Support</li>
+                <li className="flex items-center gap-2"><Headphones size={16} className="text-primary/60" /> Helpdesk Support</li>
+                <li className="flex items-center gap-2"><AlertCircle size={16} className="text-primary/60" /> Incident Management</li>
+                <li className="flex items-center gap-2"><Terminal size={16} className="text-primary/60" /> Ticketing Systems</li>
               </ul>
             </div>
-            <div className="card-hover">
+            <div className="card-hover group">
+              <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform">
+                <Cpu size={24} />
+              </div>
               <h3 className="text-xl font-display font-bold mb-4 text-primary">Hardware</h3>
-              <ul className="text-slate-600 space-y-2">
-                <li>Desktop & Laptop Troubleshooting</li>
-                <li>Printer & Peripheral Support</li>
-                <li>Hardware Installation & Configuration</li>
+              <ul className="text-slate-600 space-y-3">
+                <li className="flex items-center gap-2"><Monitor size={16} className="text-primary/60" /> Desktop & Laptop Support</li>
+                <li className="flex items-center gap-2"><Cpu size={16} className="text-primary/60" /> Hardware Configuration</li>
+                <li className="flex items-center gap-2"><Layers size={16} className="text-primary/60" /> Peripheral Support</li>
               </ul>
             </div>
-            <div className="card-hover">
+            <div className="card-hover group">
+              <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform">
+                <Globe size={24} />
+              </div>
               <h3 className="text-xl font-display font-bold mb-4 text-primary">Networking</h3>
-              <ul className="text-slate-600 space-y-2">
-                <li>Basic Networking</li>
-                <li>TCP/IP</li>
-                <li>DNS</li>
-                <li>DHCP</li>
-                <li>Connectivity Troubleshooting</li>
+              <ul className="text-slate-600 space-y-3">
+                <li className="flex items-center gap-2"><Network size={16} className="text-primary/60" /> TCP/IP & DNS</li>
+                <li className="flex items-center gap-2"><Globe size={16} className="text-primary/60" /> DHCP & Connectivity</li>
+                <li className="flex items-center gap-2"><ShieldCheck size={16} className="text-primary/60" /> Network Security</li>
               </ul>
             </div>
-            <div className="card-hover">
+            <div className="card-hover group">
+              <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform">
+                <Database size={24} />
+              </div>
               <h3 className="text-xl font-display font-bold mb-4 text-primary">Database & Data</h3>
-              <ul className="text-slate-600 space-y-2">
-                <li>Microsoft SQL Server</li>
-                <li>T-SQL</li>
-                <li>Database Design</li>
-                <li>Query Optimization</li>
-                <li>Indexing</li>
-                <li>Execution Plans</li>
-                <li>Backup & Recovery</li>
-                <li>Data Normalization</li>
+              <ul className="text-slate-600 space-y-3">
+                <li className="flex items-center gap-2"><Database size={16} className="text-primary/60" /> MS SQL Server</li>
+                <li className="flex items-center gap-2"><Code size={16} className="text-primary/60" /> T-SQL Optimization</li>
+                <li className="flex items-center gap-2"><Layers size={16} className="text-primary/60" /> Database Design</li>
               </ul>
             </div>
-            <div className="card-hover">
+            <div className="card-hover group">
+              <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform">
+                <Terminal size={24} />
+              </div>
               <h3 className="text-xl font-display font-bold mb-4 text-primary">Programming</h3>
-              <ul className="text-slate-600 space-y-2">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Python</li>
-                <li>SQL</li>
-                <li>Node.js</li>
-                <li>React.js</li>
+              <ul className="text-slate-600 space-y-3">
+                <li className="flex items-center gap-2"><Code size={16} className="text-primary/60" /> Python & JavaScript</li>
+                <li className="flex items-center gap-2"><Atom size={16} className="text-primary/60" /> React.js & Node.js</li>
+                <li className="flex items-center gap-2"><Terminal size={16} className="text-primary/60" /> SQL & HTML/CSS</li>
               </ul>
             </div>
           </div>
