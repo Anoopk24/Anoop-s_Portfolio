@@ -1,1 +1,1 @@
-export const PROFILE_IMAGE_URL = "https://media.licdn.com/dms/image/v2/D5635AQFXibyZh-_NmQ/profile-framedphoto-shrink_400_400/B56ZyMbObrHgAc-/0/1771882473447?e=1775048400&v=beta&t=sQ7OXquRiGCI3Jj5NKkHbQ-cSBwlFweTB04I30gwbwg";
+export const PROFILE_IMAGE_URL = "/profile.png";
