@@ -18,17 +18,28 @@ export default function Contact() {
         body: JSON.stringify(formData),
       });
 
-      const data = await response.json();
+      let data;
+      const contentType = response.headers.get('content-type');
+      if (contentType && contentType.includes('application/json')) {
+        data = await response.json();
+      } else {
+        const text = await response.text();
+        console.error('Non-JSON response from server:', text);
+        throw new Error('Server returned an invalid response format.');
+      }
 
       if (response.ok) {
         setStatus({ type: 'success', message: data.message || 'Message sent successfully!' });
         setFormData({ name: '', email: '', message: '' });
       } else {
-        setStatus({ type: 'error', message: data.error || 'Failed to send message.' });
+        setStatus({ type: 'error', message: data.error || data.details || 'Failed to send message.' });
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error('Contact form error:', error);
-      setStatus({ type: 'error', message: 'An unexpected error occurred.' });
+      setStatus({ 
+        type: 'error', 
+        message: error?.message || 'An unexpected error occurred. Please try again later.' 
+      });
     } finally {
       setIsSubmitting(false);
     }

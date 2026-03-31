@@ -14,6 +14,7 @@ async function startServer() {
 
   // API route for contact form
   app.post("/api/contact", async (req, res) => {
+    console.log("Received contact request:", req.body);
     const { name, email, message } = req.body;
 
     if (!name || !email || !message) {
@@ -25,12 +26,14 @@ async function startServer() {
       const user = process.env.EMAIL_USER;
       const pass = process.env.EMAIL_PASS;
 
+      console.log("Email config check:", { hasUser: !!user, hasPass: !!pass });
+
       if (!user || !pass) {
         console.warn("EMAIL_USER or EMAIL_PASS not set. Logging message instead.");
-        console.log("Contact Form Submission:", { name, email, message });
+        console.log("Contact Form Submission (Simulated):", { name, email, message });
         return res.json({ 
           success: true, 
-          message: "Message received (simulated). Please configure EMAIL_USER and EMAIL_PASS for real emails." 
+          message: "Message received (simulated). Please configure EMAIL_USER and EMAIL_PASS in Settings for real emails." 
         });
       }
 
@@ -39,18 +42,24 @@ async function startServer() {
         auth: { user, pass },
       });
 
+      console.log("Attempting to send email to:", "anoopkaur444@gmail.com");
+      
       await transporter.sendMail({
-        from: `"${name}" <${email}>`,
+        from: `"${name}" <${user}>`, // Gmail often requires 'from' to be the auth user
         to: "anoopkaur444@gmail.com",
         subject: `New Portfolio Contact: ${name}`,
         text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
         replyTo: email
       });
 
+      console.log("Email sent successfully");
       res.json({ success: true, message: "Email sent successfully!" });
-    } catch (error) {
-      console.error("Error sending email:", error);
-      res.status(500).json({ error: "Failed to send email" });
+    } catch (error: any) {
+      console.error("Error in /api/contact:", error);
+      res.status(500).json({ 
+        error: "Failed to send email", 
+        details: error?.message || "Unknown error" 
+      });
     }
   });
 
