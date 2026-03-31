@@ -12,8 +12,20 @@ async function startServer() {
 
   app.use(express.json());
 
+  // Health check route
+  app.get("/api/health", (req, res) => {
+    res.json({ 
+      status: "ok", 
+      config: { 
+        hasUser: !!process.env.EMAIL_USER, 
+        hasPass: !!process.env.EMAIL_PASS,
+        nodeEnv: process.env.NODE_ENV 
+      } 
+    });
+  });
+
   // API route for contact form
-  app.post("/api/contact", async (req, res) => {
+  app.post(["/api/contact", "/api/contact/"], async (req, res) => {
     console.log("Received contact request:", req.body);
     const { name, email, message } = req.body;
 
@@ -58,9 +70,15 @@ async function startServer() {
       console.error("Error in /api/contact:", error);
       res.status(500).json({ 
         error: "Failed to send email", 
-        details: error?.message || "Unknown error" 
+        details: error?.message || String(error)
       });
     }
+  });
+
+  // Catch-all for undefined API routes
+  app.all("/api/*", (req, res) => {
+    console.warn(`404 API Route: ${req.method} ${req.url}`);
+    res.status(404).json({ error: `API route not found: ${req.method} ${req.url}` });
   });
 
   // Vite middleware for development

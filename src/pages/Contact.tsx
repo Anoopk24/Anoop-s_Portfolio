@@ -25,20 +25,23 @@ export default function Contact() {
       } else {
         const text = await response.text();
         console.error('Non-JSON response from server:', text);
-        throw new Error('Server returned an invalid response format.');
+        throw new Error(`Server returned status ${response.status} with non-JSON content. This usually means the API route is not found or the server crashed.`);
       }
 
       if (response.ok) {
         setStatus({ type: 'success', message: data.message || 'Message sent successfully!' });
         setFormData({ name: '', email: '', message: '' });
       } else {
-        setStatus({ type: 'error', message: data.error || data.details || 'Failed to send message.' });
+        setStatus({ 
+          type: 'error', 
+          message: `${data.error || 'Failed to send message'}${data.details ? `: ${data.details}` : ''} (Status: ${response.status})` 
+        });
       }
     } catch (error: any) {
       console.error('Contact form error:', error);
       setStatus({ 
         type: 'error', 
-        message: error?.message || 'An unexpected error occurred. Please try again later.' 
+        message: `Error: ${error?.message || 'An unexpected error occurred. Please check the console.'}` 
       });
     } finally {
       setIsSubmitting(false);
